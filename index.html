@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        
+        #box{
+            width: 200px;
+            height: 150px;
+            margin:auto;
+        }
+        #alert{
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 20px;
+        }
+        #btn{
+            margin-top: 25px;
+            display: block;
+            margin: auto;
+            padding: 10px;
+            font-size: 18px;
+            background-color: black;
+            color:white;
+            border-radius: 15px;
+            cursor: pointer;
+            margin-top:15px;
+            font-family: 'Times New Roman';
+            width:20%;
+            text-transform: uppercase;
+        }
+        #btn:hover{
+            background-color: white;
+            color:black;
+        }
+        
+    </style>
+</head>
+<body>
+  
+        <div id="box">
+            
+        </div>
+
+        <span id="alert">
+            
+        </span>
+
+        <button id="btn">Cliquer</button>
+    
+    <script>
+        let btn = document.getElementById('btn');
+        let alertMessage = document.getElementById('alert');
+        let box = document.getElementById('box');
+        let n = 1;
+
+        function commander(){
+           if(n == 1){
+                box.style.backgroundColor = "red";
+                alertMessage.innerText = "Arrêter";
+                n++
+           }
+            else if (n == 2){
+                box.style.backgroundColor = "yellow";
+                alertMessage.innerText = "Apprêtez-vous";
+                n++
+            }else if(n == 3){
+                box.style.backgroundColor = "Green";
+                alertMessage.innerText = "Allez-y";
+                n = 1;
+            }
+        }
+        btn.addEventListener('click',commander);
+
+        
+    </script>
+
+</body>
+</html>

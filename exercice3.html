@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calcul</title>
+</head>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Entrainement du javascript sur les calculs</legend>
+            
+            <label for="val1">A:</label>
+            <input type="number" name="val1" id="val1">
+            
+            <select name="op" id="Op">
+                <option value="Plus">+</option>
+                <option value="Moin">-</option>
+                <option value="Multi">*</option>
+                <option value="Divis">/</option>
+            </select>
+
+            <label for="val2">B:</label>
+            <input type="number" name="val2" id="val2">
+
+            <button type="button" id="cliquer">Executer</button>        
+
+            <span id="resultat">
+                 
+            </span>
+        </fieldset>
+    </form>
+
+    <script>
+        let val1 = document.getElementById('val1');
+        let val2 = document.getElementById('val2');
+        let Op = document.getElementById('Op');
+        let btn = document.getElementById('cliquer');
+        let Result = document.getElementById('resultat');
+
+        btn.addEventListener('click',function(){
+
+            if (Op.value == "Plus"){
+
+                let s = parseInt(val1.value)+parseInt(val2.value);
+                Result.innerText = "La somme est: "+ s;
+
+            }else if (Op.value == "Moin"){
+
+                let d = parseInt(val1.value)-parseInt(val2.value);
+                Result.innerText = "La Difference est: "+ d;
+
+            }else if (Op.value == "Multi"){
+
+                let m = parseInt(val1.value)*parseInt(val2.value);
+                Result.innerText = "La Multiplication est: "+ m;
+
+            }else if (Op.value == "Divis"){
+
+                if (parseInt(val2.value) == 0){
+                    Result.style.backgroundColor = "red";
+                    Result.style.color = 'white';
+                    Result.innerText = "Division par zero impossible"
+                }else{
+                    let div = parseInt(val1.value)/parseInt(val2.value);
+                    Result.innerText = "La Division est: "+ div;
+                }
+
+            }
+        });
+    </script>
+</body>
+</html>

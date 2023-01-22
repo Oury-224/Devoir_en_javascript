@@ -1,0 +1,45 @@
+#val1, #val2, #Op{
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+#val1, #val2{
+    width: 20%;
+}
+
+span{
+    display:block;  
+}
+
+#cliquer{
+    padding: 5px;
+    font-size: 15px;
+    background-color: black;
+    color:white;
+    border-radius: 15px;
+}
+
+#cliquer:hover{
+    background-color: white;
+    color:black;
+}
+
+fieldset{
+    margin: auto;
+    padding: 30px;
+    width: 35%;
+    border-radius: 50px;
+}
+
+#resultat{
+    display: inline-block;
+    font-size: 18px;
+    background-color: rgb(242, 240, 240);
+    border-radius: 20px;
+    width: 90%;
+    height: 30px;
+    margin-top: 30px;
+    text-align: center;
+    color:black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
